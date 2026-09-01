@@ -125,8 +125,8 @@ const res = await fetch("https://formspree.io/f/SEU_ID", {
 
 ## 📈 Próximos Passos
 
-- [ ] Adicionar sua foto real
-- [ ] Conectar formulário ao Formspree
+- [x] Adicionar sua foto real
+- [x] Conectar formulário ao Formspree
 - [ ] Adicionar mais projetos reais
 - [ ] Integrar API do GitHub (`api.github.com/users/{user}/repos`)
 - [ ] Adicionar seção de certificados
