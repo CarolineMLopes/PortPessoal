@@ -117,7 +117,7 @@ const PROJECTS_DATA: Project[] = [
     type: "real",
     techs: ["HTML", "CSS", "PHP", "MySQL"],
     githubUrl: "https://github.com/CarolineMLopes/Site_Fotografia",
-    liveUrl: "",
+    liveUrl: "https://nkedicaoevideo.com.br",
     featured: true,
   },
 ];

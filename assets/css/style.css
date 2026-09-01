@@ -1273,6 +1273,13 @@ body:hover .cursor { opacity: 1; }
   margin-bottom: var(--space-3);
 }
 
+.edu-item__description {
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 .edu-item__status {
   display: inline-flex;
   align-items: center;
