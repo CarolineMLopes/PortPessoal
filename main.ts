@@ -1,3 +1,5 @@
+export {};
+
 // ===================================================
 // PORTFOLIO MAIN.TS — TypeScript Source
 // ===================================================
@@ -451,19 +453,26 @@ class PortfolioApp {
         return;
       }
 
-      // Simula envio (substitua pelo Formspree ou EmailJS)
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span>Enviando...</span>`;
 
       try {
-        // 🔧 Para usar Formspree: substitua pela chamada real
-        // const res = await fetch("https://formspree.io/f/SEU_ID", { method: "POST", body: new ContactFormData(form) });
-        await this.simulateSend();
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json",
+          },
+        });
 
-        this.showFeedback(feedback, "✅ Mensagem enviada! Retornarei em breve.", "success");
+        if (!response.ok) {
+          throw new Error("Formspree error");
+        }
+
+        this.showFeedback(feedback, "Mensagem enviada! Retornarei em breve.", "success");
         form.reset();
       } catch {
-        this.showFeedback(feedback, "❌ Erro ao enviar. Tente pelo LinkedIn.", "error");
+        this.showFeedback(feedback, "Erro ao enviar. Tente pelo LinkedIn.", "error");
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `<span>Enviar Mensagem</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;

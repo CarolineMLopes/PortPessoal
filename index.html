@@ -62,43 +62,53 @@
       </div>
 
       <div class="container hero__content">
-        <div class="hero__tag fade-up">
-          <span class="tag-dot"></span>
-          Disponível para estágio & oportunidades
-        </div>
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <div class="hero__tag fade-up">
+              <span class="tag-dot"></span>
+              Disponível para estágio & oportunidades
+            </div>
 
-        <h1 class="hero__title fade-up">
-          <span class="title-line">Olá, eu sou</span>
-          <span class="title-name" id="typed-name">Caroline Marcon Lopes</span>
-          <span class="title-line title-line--accent">Desenvolvedora<br>Full Stack</span>
-        </h1>
+            <h1 class="hero__title fade-up">
+              <span class="title-line">Olá, eu sou</span>
+              <span class="title-name" id="typed-name">Caroline Marcon Lopes</span>
+              <span class="title-line title-line--accent">Desenvolvedora<br>Full Stack</span>
+            </h1>
 
-        <p class="hero__desc fade-up">
-          Formada em <strong>Análise e Desenvolvimento de Sistemas</strong> — construindo projetos reais com HTML, CSS, PHP, C#, Ionic/Angular e MySQL.
-        </p>
+            <p class="hero__desc fade-up">
+              Formada em <strong>Análise e Desenvolvimento de Sistemas</strong> — construindo projetos reais com HTML, CSS, PHP, C#, Ionic/Angular e MySQL.
+            </p>
 
-        <div class="hero__cta fade-up">
-          <a href="#projetos" class="btn btn--primary">
-            <span>Ver Projetos</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#contato" class="btn btn--ghost">Entrar em Contato</a>
-        </div>
+            <div class="hero__cta fade-up">
+              <a href="#projetos" class="btn btn--primary">
+                <span>Ver Projetos</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#contato" class="btn btn--ghost">Entrar em Contato</a>
+            </div>
 
-        <div class="hero__stats fade-up">
-          <div class="stat">
-            <span class="stat__number" data-target="3">0</span>
-            <span class="stat__label">Projetos</span>
+            <div class="hero__stats fade-up">
+              <div class="stat">
+                <span class="stat__number" data-target="3">0</span>
+                <span class="stat__label">Projetos</span>
+              </div>
+              <div class="stat__divider"></div>
+              <div class="stat">
+                <span class="stat__number" data-target="5">0</span>
+                <span class="stat__label">Tecnologias</span>
+              </div>
+              <div class="stat__divider"></div>
+              <div class="stat">
+                <span class="stat__number" data-target="3">0</span>
+                <span class="stat__label">Anos estudando</span>
+              </div>
+            </div>
           </div>
-          <div class="stat__divider"></div>
-          <div class="stat">
-            <span class="stat__number" data-target="5">0</span>
-            <span class="stat__label">Tecnologias</span>
-          </div>
-          <div class="stat__divider"></div>
-          <div class="stat">
-            <span class="stat__number" data-target="3">0</span>
-            <span class="stat__label">Anos estudando</span>
+
+          <div class="hero__visual fade-up" aria-label="Foto de Caroline Marcon Lopes">
+            <div class="hero__photo-wrap">
+              <img src="assets/img/caroline.jpeg" alt="Caroline Marcon Lopes" class="hero__photo">
+            </div>
           </div>
         </div>
       </div>
@@ -304,6 +314,42 @@
                 </div>
               </a>
             </div>
+          </div>
+
+          <div class="contact__form-wrap fade-up">
+            <form id="contact-form" class="contact__form" action="https://formspree.io/f/xbgjogjn" method="POST">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input id="name" name="name" type="text" placeholder="Seu nome" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Assunto</label>
+                <select id="subject" name="subject">
+                  <option value="Oportunidade">Oportunidade</option>
+                  <option value="Projeto">Projeto</option>
+                  <option value="Estágio">Estágio</option>
+                  <option value="Conversa">Conversa</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+              </div>
+
+              <button id="submit-btn" class="btn btn--primary" type="submit">
+                <span>Enviar Mensagem</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
           </div>
         </div>
       </div>

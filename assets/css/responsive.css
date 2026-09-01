@@ -76,10 +76,21 @@
 
   /* Hero */
   .hero__content { padding-top: var(--space-8); }
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__copy { max-width: none; }
+  .hero__tag { margin-bottom: var(--space-4); }
   .hero__cta { flex-direction: column; }
   .hero__cta .btn { width: 100%; justify-content: center; }
-  .hero__stats { gap: var(--space-4); }
+  .hero__stats {
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: var(--space-5);
+  }
+  .stat { flex: 1 1 30%; }
+  .stat__divider { display: none; }
   .hero__scroll { display: none; }
+  .hero__photo-wrap { width: min(100%, 280px); }
 
   /* About */
   .about__grid { gap: var(--space-8); }
@@ -102,6 +113,30 @@
   /* Projects */
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+  .project-card__links {
+    flex-wrap: wrap;
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .contact__form-wrap {
+    padding: var(--space-6);
+  }
+  .channel {
+    padding: var(--space-3) var(--space-4);
+  }
+  .channel__value {
+    white-space: normal;
+    line-height: 1.5;
+  }
+  #submit-btn {
+    width: 100%;
+    justify-content: center;
+    align-self: stretch;
   }
 
   /* Footer */

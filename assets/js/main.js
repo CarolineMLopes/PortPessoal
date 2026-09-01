@@ -408,13 +408,19 @@ class PortfolioApp {
                 this.showFeedback(feedback, validation.message, "error");
                 return;
             }
-            // Simula envio (substitua pelo Formspree ou EmailJS)
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>Enviando...</span>`;
             try {
-                // 🔧 Para usar Formspree: substitua pela chamada real
-                // const res = await fetch("https://formspree.io/f/SEU_ID", { method: "POST", body: new ContactFormData(form) });
-                await this.simulateSend();
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+                if (!response.ok) {
+                    throw new Error("Formspree error");
+                }
                 this.showFeedback(feedback, "✅ Mensagem enviada! Retornarei em breve.", "success");
                 form.reset();
             }
